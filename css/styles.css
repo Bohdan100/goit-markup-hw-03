@@ -158,10 +158,13 @@ p {
 /* flex для преимуществ - 4 описания */
 .adventages-list {
   display: flex;
-  justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.adventages-list-item {
+  min-width: 270px;
 }
 
 .adventages-list-item:not(:last-child) {
@@ -206,15 +209,14 @@ p {
 }
 
 .activity-list {
-  display: inline-flex;
-  justify-content: center;
+  display: flex;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .activity li:not(:last-child) {
-  margin-right: 9px;
+  margin-right: 30px;
 }
 
 /* ---------------------TEAM---------------------------- */
@@ -250,13 +252,16 @@ p {
 
 /* Сотрудник команды */
 
-.team-item {
+.team-item-text {
+  padding-top: 30px;
   padding-bottom: 30px;
-
-  text-align: center;
 }
+
+.team-item-photo {
+  display: block;
+}
+
 .team h3 {
-  margin-top: 30px;
   margin-bottom: 10px;
 
   font-weight: 500;
@@ -385,9 +390,7 @@ p {
   margin-right: 30px;
   margin-bottom: 30px;
   padding-right: 0;
-  padding-bottom: 20px;
-
-  border-bottom: 1px solid #eeeeee;
+  font-size: 0;
 }
 
 .projects-photo-item:nth-child(3n) {
@@ -399,11 +402,21 @@ p {
 }
 
 /* СТРУКТУРА ПРОЕКТА ВНУТРИ */
+.projects-photo-text {
+  margin-top: 0;
+  padding: 20px 24px;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  background-color: #ffffff;
+}
+
+.image {
+  margin-bottom: 0;
+}
+
 .projects h3 {
-  margin-top: 20px;
   margin-bottom: 4px;
-  margin-right: 24px;
-  margin-left: 24px;
 
   font-weight: 700;
   font-size: 18px;
@@ -412,9 +425,6 @@ p {
 }
 
 .projects p {
-  margin-right: 24px;
-  margin-left: 24px;
-
   font-size: 16px;
   line-height: 1.88em;
   color: #757575;
